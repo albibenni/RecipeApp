@@ -32,6 +32,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures{
+        compose=true
+    }
+
+    composeOptions{
+        kotlinCompilerExtensionVersion="1.0.0-beta05"
+    }
 }
 
 dependencies {
@@ -43,4 +50,42 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    def compose_version  = "1.0.0-beta07"
+    implementation "androidx.compose.ui:ui:$compose_version"
+    //Toolingsupport(Previews,etc.)
+    implementation("androidx.compose.ui:ui-tooling:$compose_version")
+//Foundation(Border,Background,Box,Image,Scroll,shapes,animations,etc.)
+    implementation("androidx.compose.foundation:foundation:$compose_version")
+//MaterialDesign
+    implementation("androidx.compose.material:material:$compose_version")
+//Materialdesignicons
+    implementation("androidx.compose.material:material-icons-core:$compose_version")
+    implementation("androidx.compose.material:material-icons-extended:$compose_version")
+//Integrationwithactivities
+    implementation("androidx.activity:activity-compose:1.3.0-alpha08")
+//IntegrationwithViewModels
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha05")
+//Integrationwithobservables
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.0-beta07")
+    implementation("androidx.compose.runtime:runtime-rxjava2:1.0.0-beta07")
+
+    def nav_version = "2.3.5"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:2.4.0-alpha01"
+    def retrofit_version = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation"com.squareup.retrofit2:converter-gson:$retrofit_version"
+
 }
