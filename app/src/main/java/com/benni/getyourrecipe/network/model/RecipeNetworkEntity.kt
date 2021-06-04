@@ -10,6 +10,9 @@ class RecipeNetworkEntity (
     @SerializedName(value = "title")
     var title: String? = null,
 
+    @SerializedName(value = "featured_image")
+    var featuredImage: String? = null,
+
     @SerializedName(value = "publisher")
     var publisher:String? = null,
 

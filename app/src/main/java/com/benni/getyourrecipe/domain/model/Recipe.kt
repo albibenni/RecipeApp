@@ -15,7 +15,7 @@ data class Recipe( //variable for a json object in https://food2fork.ca/
     val source_url: String? = null,
     val description: String? = null,
     val cooking_instructions: String? = null,
-    val ingredients: List<String>? = null,
+    val ingredients: List<String> = listOf(),
     val date_added: String? = null,
     val date_updated: String? = null,
 
