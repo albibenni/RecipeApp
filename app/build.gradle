@@ -51,7 +51,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    def compose_version  = "1.0.0-beta07"
+    def compose_version  = "1.0.0-beta08"
     implementation "androidx.compose.ui:ui:$compose_version"
     //Toolingsupport(Previews,etc.)
     implementation("androidx.compose.ui:ui-tooling:$compose_version")
@@ -67,8 +67,8 @@ dependencies {
 //IntegrationwithViewModels
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha06")
 //Integrationwithobservables
-    implementation("androidx.compose.runtime:runtime-livedata:1.0.0-beta07")
-    implementation("androidx.compose.runtime:runtime-rxjava2:1.0.0-beta07")
+    implementation("androidx.compose.runtime:runtime-livedata:$compose_version")
+    implementation("androidx.compose.runtime:runtime-rxjava2:$compose_version")
 
     def nav_version = "2.3.5"
 
