@@ -2,7 +2,7 @@ package com.benni.getyourrecipe.network.model
 
 import com.google.gson.annotations.SerializedName
 
-class RecipeNetworkEntity (
+data class RecipeDto ( //data transfer object
 
     @SerializedName(value = "pk")
     var pk:Int? = null,

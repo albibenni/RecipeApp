@@ -3,9 +3,6 @@ package com.benni.getyourrecipe
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.benni.getyourrecipe.domain.model.Recipe
-import com.benni.getyourrecipe.network.model.RecipeNetworkEntity
-import com.benni.getyourrecipe.network.model.RecipeNetworkMapper
 import com.benni.getyourrecipe.network.responses.RecipeService
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.CoroutineScope
@@ -13,7 +10,6 @@ import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
